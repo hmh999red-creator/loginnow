@@ -1,0 +1,150 @@
+:root {
+  --amber: #d97706;
+  --cream: #fff8e1;
+  --foam: #fdf6dc;
+  --soft-brown: #92400e;
+  --dark-brown: #3f2f1d;
+  --wood-shadow: rgba(63, 47, 29, 0.25);
+  --radius: 14px;
+  --transition: 0.3s ease;
+}
+
+/* ===== BODY (Old Paper Background) ===== */
+body {
+  margin: 0;
+  font-family: "Georgia", serif;
+  background-color: #fdf6dc;
+  background-image: 
+    radial-gradient(rgba(0,0,0,0.02) 1px, transparent 1px),
+    radial-gradient(rgba(0,0,0,0.02) 1px, transparent 1px);
+  background-size: 4px 4px;
+  color: var(--dark-brown);
+}
+
+/* ===== CONTAINER ===== */
+.container {
+  padding: 50px 40px;
+  max-width: 1300px;
+  margin: auto;
+}
+
+/* ===== SALOON TITLE ===== */
+.container h2 {
+  font-family: 'Rye', cursive;
+  text-transform: uppercase;
+  font-size: 42px;
+  letter-spacing: 4px;
+  text-align: center;
+  color: var(--soft-brown);
+  text-shadow: 2px 2px 0 #fff3c4,
+               4px 4px 0 rgba(0,0,0,0.1);
+  margin-bottom: 10px;
+}
+
+.container h3 {
+  text-align: center;
+  font-style: italic;
+  margin-bottom: 50px;
+  color: #7c5a32;
+}
+
+/* ===== GRID ===== */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 35px;
+}
+
+@media (max-width: 1024px) {
+  .grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 640px) {
+  .grid { grid-template-columns: 1fr; }
+}
+
+/* ===== CARD (Menu Board Style) ===== */
+.card {
+  background: var(--cream);
+  border-radius: var(--radius);
+  padding: 25px;
+  box-shadow: 0 8px 18px var(--wood-shadow);
+  border: 2px solid rgba(146, 64, 14, 0.2);
+  transition: var(--transition);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* ===== IMAGE AREA ===== */
+.card img {
+  width: 75%;
+  height: 180px;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
+  padding: 20px;
+
+  background: #fffffd;
+  border-radius: 10px;
+  border: 1px solid rgba(146, 64, 14, 0.15);
+
+  box-shadow: inset 0 3px 6px rgba(0,0,0,0.05);
+
+  transition: 0.3s ease;
+}
+
+/* ===== PRODUCT TITLE ===== */
+.card h3 {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 18px 0 10px 0;
+  color: var(--soft-brown);
+  font-family: "Georgia", serif;
+}
+
+/* ===== PRICE (Amber Gold) ===== */
+.price {
+  font-size: 22px;
+  font-weight: bold;
+  color: var(--amber);
+  margin-bottom: 5px;
+}
+
+/* ===== QTY ===== */
+.card p {
+  font-size: 14px;
+  color: #7c5a32;
+}
+
+/* ===== DIVIDER ===== */
+.divider {
+  height: 1px;
+  background: rgba(146, 64, 14, 0.15);
+  margin: 18px 0;
+}
+
+/* ===== META ===== */
+.meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* ===== BADGE (Saloon Tag Style) ===== */
+.badge {
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: bold;
+  background: var(--amber);
+  color: white;
+  letter-spacing: 1px;
+}
+
+/* ===== BRAND ===== */
+.brand {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--soft-brown);
+}
